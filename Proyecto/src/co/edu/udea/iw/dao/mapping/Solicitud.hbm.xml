@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 3/05/2017 08:43:51 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="co.edu.udea.iw.dto.Solicitud" table="SOLICITUD">
+        <id name="id" type="java.lang.Long">
+            <column name="ID" precision="11" />
+            <generator class="assigned" />
+        </id>        
+        <many-to-one name="Tipo_Solicitud_id" class="co.edu.udea.iw.dto.Tipo_solicitud" fetch="select" lazy="false">
+        	<column name="TIPO_SOLICITUD_ID" precision="11" not-null="true"></column>
+        </many-to-one>       
+        <property name="fecha" type="java.util.Date">
+            <column name="FECHA" />
+        </property>
+        <property name="contenido" type="java.lang.String">
+            <column name="CONTENIDO" length="300"/>
+        </property>   
+        <many-to-one name="usuario_Id" class="co.edu.udea.iw.dto.Usuario" fetch="select" lazy="false">
+        	<column name="USUARIO_ID" precision="11" not-null="true"></column>
+        </many-to-one>      
+    </class>
+</hibernate-mapping>
