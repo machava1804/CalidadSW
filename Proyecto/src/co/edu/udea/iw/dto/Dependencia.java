@@ -1,5 +1,6 @@
 package co.edu.udea.iw.dto;
 
+
 /**
  * DTO para la tabla Dependencia
  * @author Maribel Chaverra Valencia - maribel.chaverra@udea.edu.co

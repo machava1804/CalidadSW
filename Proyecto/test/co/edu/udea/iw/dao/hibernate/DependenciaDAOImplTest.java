@@ -1,5 +1,6 @@
 package co.edu.udea.iw.dao.hibernate;
 
+
 import static org.junit.Assert.*;
 
 import java.util.List;
